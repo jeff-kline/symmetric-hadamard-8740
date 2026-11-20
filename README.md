@@ -2,10 +2,11 @@
 
 Jeffery Kline
 
-**Status: draft.** This repository is being prepared for release under the
-project's
-[public research standard](https://jeff-kline.github.io/posts/research-program/index.html).
-No DOI exists yet.
+**Status: release candidate for version 0.1.0.** The claims are frozen
+and audited (see [ADMISSION.md](ADMISSION.md)). There is no tag, archive or
+DOI yet, so there is no stable citation. Admission under the project's
+[public research standard](https://jeff-kline.github.io/posts/research-program/index.html)
+is a release decision, not peer review or a correctness certificate.
 
 The note is [paper/main.pdf](paper/main.pdf); its source is
 [paper/main.tex](paper/main.tex).
@@ -32,7 +33,8 @@ $460\cdot19^r$ for all $r$; the case $r=1$ is the order 8740.
 Seberry's 1980 recursion gives the orders $(q+1)(q+4)q^r$ for ordinary
 Hadamard matrices. Kumar's public index gives the symmetric case $r=0$, as a
 symmetric form of the Williamson–Wallis $m(m+3)$ construction on Paley's
-symmetric orthogonal design; it records the orders 460 and 4828. New here:
+symmetric orthogonal design; the index records the order 4828, and its
+construction notes check the case $q=19$ (order 460). New here:
 
 1. **Principal result: a symmetric Hadamard matrix of order 8740**, settling
    the census entry $v=2185$ (paper Section 3).
@@ -62,7 +64,7 @@ examined. This is not a claim of global priority.
   the recursive orthogonal design.
 - **Kumar (2026)**, public index
   [`vatskishan03/Hadamard`](https://github.com/vatskishan03/Hadamard): the symmetric case $r=0$
-  (orders 460 and 4828).
+  (order 4828 in the index; order 460 checked in its construction notes).
 - **Đoković and Seberry (2025)**, census of symmetric and skew Hadamard
   matrices of order $4v$, $v$ odd below 2500: lists 2185 as undecided.
 
@@ -70,13 +72,13 @@ examined. This is not a claim of global priority.
 
 | Claim | Status |
 |---|---|
-| Theorem 1 (symmetric recursion) and Corollary 2 | proved on paper; checked by two cold-examiner stages |
+| Theorem 1 (symmetric recursion) and Corollary 2 | proved on paper; checked in two separate AI review passes, not human peer review (see [audit/LEDGER.md](audit/LEDGER.md)) |
 | The matrix of order 8740 | certified computation: built from its formula and checked by two programs that share no code |
 | Priority at 8740 and for the lift | bounded search; see [audit/PRIOR-ART.md](audit/PRIOR-ART.md) |
 
 Limits: the family needs a symmetric Hadamard matrix of order $q+5$. Among
 the census entries below 2500 it reaches exactly three undecided ones: 2185,
-1207 and 189.
+1207 and 189 (see [audit/census-family.md](audit/census-family.md)).
 
 ## Reproduce
 

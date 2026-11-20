@@ -1,10 +1,10 @@
 # Admission record
 
-**Current state:** DRAFT
+**Current state:** CANDIDATE
 
 Current verdict: NOT YET ADMITTED
 
-**Version:** 0.1.0 (in preparation)
+**Version:** 0.1.0 (release candidate)
 
 **Standard:** [A Public Standard for This Work](https://jeff-kline.github.io/posts/research-program/index.html)
 
@@ -29,5 +29,5 @@ examined.
 | Gate | Status | Evidence or residual |
 |---|---|---|
 | P1 prior work and credit | PARTIAL | `audit/PRIOR-ART.md` and the search log. Residuals: the Handbook chapter, Seberry–Yamada and Seberry (1981) were not read |
-| A1 claim and artifact consistency | IN PROGRESS | Cold examiner: Stage 1 NOT-BROKEN, Stage 2 VERIFIED, 7 errata applied. Release audit pending |
-| R1 release and stewardship | IN PROGRESS | `make verify` (4 MATCH) and `make paper` pass. No tag, archive or DOI yet |
+| A1 claim and artifact consistency | PASS | Cold examiner (Stage 1 NOT-BROKEN, Stage 2 VERIFIED, 7 errata applied) and one combined release audit (10 findings); dispositions in `audit/LEDGER.md` |
+| R1 release and stewardship | IN PROGRESS | `make verify` (4 MATCH) and a deterministic `make paper` pass, also from a clean `git archive`; correction policy, CITATION.cff and MANIFEST.sha256 present. No tag, archive or DOI yet |

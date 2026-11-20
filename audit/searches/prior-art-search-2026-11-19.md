@@ -15,7 +15,7 @@ search is recorded as NOT PERFORMED, not as a negative result.
   - $v=2185$ is in the symmetric undecided list (p. 5);
   - so are 1207 and 189.
 - **`vatskishan03/Hadamard` at d885022 (HEAD on 2026-11-19):** `symmetric/README.md`, `symmetric/4828/README.md`, `search/NOTES.md`, `NOVELTY.md`.
-  - 460 and 4828 (the case $r=0$) are recorded as a symmetric form of the Williamson–Wallis $m(m+3)$ construction, "New, but obtainable classically".
+  - 4828 (the case $r=0$) is recorded in the index as a symmetric form of the Williamson–Wallis $m(m+3)$ construction, "New, but obtainable classically". `search/NOTES.md` states the general case and checks it at $q=7,11,19,23$ (orders 88, 180, 460, 648).
   - Order 8740 is not recorded.
   - `search/NOTES.md` seeks $4\cdot2185$ only through a symmetric OD(92; 1, 91), described as unknown.
   - The 4828 README states that no classical source gives the symmetric version.
@@ -44,6 +44,10 @@ search is recorded as NOT PERFORMED, not as a negative result.
 - The Handbook of Combinatorial Designs, Craigen–Kharaghani chapter: not accessible.
 - Seberry–Yamada (1992, 2020): not accessible.
 - The journal text of Seberry–Balonin (2017); only its arXiv preprint was read.
-- Wallis (1969, 1970, 1975): known only through quotations in the public index.
+- Wallis (1969, 1970) and Wallis, Linear Multilinear Algebra 3 (1975): known only through quotations in the public index (the 1975 scan has no text layer).
+
+## Read after the release audit
+
+- Wallis, *Constructions for amicable orthogonal designs*, Bull. Austral. Math. Soc. 12 (1975), 179–182 (Cambridge PDF): in the proof of Theorem 1, $(cI+dQ)R$ with $R$ the reversal is a symmetric type 2 matrix.
 - Seberry (1981), *Recurrence formulas for the construction of Williamson-type matrices*, which cites Spence 1977: not read.
 - Google Scholar, MathSciNet, zbMATH: not accessible.

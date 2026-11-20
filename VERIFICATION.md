@@ -1,6 +1,6 @@
 # Verification record
 
-## Environment of the pinned run (2026-11-20)
+## Environment of the pinned run (2026-11-19)
 
 - macOS 26.6.2, x86_64, one core, run under `nice`.
 - Apple clang 21.0.0, used as `c++ -std=c++17 -O2` and `cc -O2`.
@@ -30,8 +30,8 @@ takes about ten seconds.
 | An independent check, sharing no code with the builder. It checks file size, zero padding, symmetry and every row-pair distance. A copy with one flipped entry fails. | `check8740.c` | `check.txt` |
 | SHA-256 of the packed matrix: 8740 rows of 1093 bytes, one bit per entry, 1 for a negative entry, most significant bit first. | `run-certificates.sh` | `matrix-sha256.txt` |
 
-The independent cold examination also reconstructed the matrix from the
-formula in separate code and found it byte-identical.
+A separate AI review pass also reconstructed the matrix from the formula in
+separate code and found it byte-identical (see [audit/LEDGER.md](audit/LEDGER.md)).
 
 ## Paper build
 

@@ -10,13 +10,12 @@
 \newcommand{\F}{\mathbb F}
 \newcommand{\one}{\mathbf 1}
 \newcommand{\doi}[2]{\href{https://doi.org/#1}{#2}}
-\newcommand{\zen}[1]{Zenodo, v0.1.0 (November 2026). \doi{10.5281/zenodo.#1}{doi:10.5281/zenodo.#1}.}
 \hypersetup{pdftitle={A symmetric Hadamard matrix of order 8740},pdfauthor={Jeffery Kline}}
 \setlength{\parindent}{1.1em}
 \raggedbottom
 \title{A symmetric Hadamard matrix of order 8740}
 \author{Jeffery Kline}
-\date{November 20, 2026\\[3pt]\small Draft}
+\date{November 20, 2026\\[3pt]\small Version 0.1.0 (release candidate)}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -26,7 +25,7 @@ We construct a symmetric Hadamard matrix of order \(8740=4\cdot2185\), settling 
 \section{The census entry}
 A sign matrix has entries in \(\{1,-1\}\). A symmetric Hadamard matrix of order \(n\) is a symmetric sign matrix \(H\) satisfying \(H^2=nI_n\). Djokovi\'c and Seberry~\cite[Section~2]{census} list \(v=2185\) among the odd \(v<2500\) for which symmetric existence at order \(4v\) was undecided. Kumar's November 2026 update~\cite{kumar} explicitly considers \(4\cdot2185\) via a symmetric orthogonal design of order 92. The order remains outside its index of 103 symmetric constructions. We give a formula over \(\F_{19}\) and \(\F_{23}\) that decides this entry.
 
-Ordinary existence at 8740 has been known for half a century. Wallis~\cite[Corollary~4]{williamson} listed 2185 as a Williamson-type component order. Spence~\cite[Theorems~6 and~10]{spence} gave a recursive orthogonal design, and Seberry~\cite[Corollary~2(b)]{seberry} obtained the exact order formula in the abstract. Wallis~\cite[proof of Theorem~1]{reverse} had also used field negation in a symmetric orthogonal design. The contribution here is a recursion on \emph{symmetric} pairs and the resulting symmetric witness at 8740. We found no earlier symmetric construction at that order in these sources or the two census lists.
+Ordinary existence at 8740 has been known for half a century. Wallis~\cite[Corollary~4]{williamson} listed 2185 as a Williamson-type component order (as quoted in Kumar's notes~\cite{kumar}). Spence~\cite[Theorems~6 and~10]{spence} gave a recursive orthogonal design, and Seberry~\cite[Corollary~2(b)]{seberry} obtained the exact order formula in the abstract. Wallis~\cite[proof of Theorem~1]{reverse} had also used field negation in a symmetric orthogonal design. The contribution here is a recursion on \emph{symmetric} pairs and the resulting symmetric witness at 8740. We found no earlier symmetric construction at that order in these sources, the census or Kumar's index.
 
 \newpage
 \section{A recursion on symmetric pairs}
@@ -92,7 +91,7 @@ The matrix \(D\) is symmetric with entries \(\pm1\), has row sum \(-1\), and has
    +CP\otimes L_{19}\otimes X
    +CP\otimes Q_{19}L_{19}\otimes D .
 \]
-Its three tensor factors have orders 20, 19 and 23. The first three orders in the sequence are \(460,\ 8740,\ 166060\). The census settlement documented here is 8740. For $r=0$ the matrix is Kumar's symmetric form of the Williamson--Wallis $m(m+3)$ construction, built on Paley's classical symmetric orthogonal design of order $q+1$; his index records $460$ and $4828=(67+1)(67+4)$ this way, and its completion step is the case $r=0$ of the theorem above~\cite{kumar}. The new step is the lift for $r\ge1$. Of the census's undecided entries the family contains exactly three: $2185$, $1207$ ($q=67$, $r=0$) and $189$ ($q=3$, $r=3$, order $756$). The last was settled after the census by Djokovi\'c~\cite{d25}, by a different construction.
+Its three tensor factors have orders 20, 19 and 23. The first three orders in the sequence are \(460,\ 8740,\ 166060\). The census settlement documented here is 8740. For $r=0$ the matrix is Kumar's symmetric form of the Williamson--Wallis $m(m+3)$ construction, built on Paley's classical symmetric orthogonal design of order $q+1$; his index records $4828=(67+1)(67+4)$ this way, his construction notes state the general case $r=0$ and check it at $q=19$ (order $460$), and its completion step is the case $r=0$ of the theorem above~\cite{kumar}. The new step is the lift for $r\ge1$. Of the census's undecided entries the family contains exactly three: $2185$, $1207$ ($q=67$, $r=0$) and $189$ ($q=3$, $r=3$, order $756$). The last was settled after the census by Djokovi\'c~\cite{d25}, by a different construction.
 
 \paragraph{Exact verification.}
 The program \texttt{code/witness.cpp} builds the matrix from the formula above and writes it packed, one bit per entry. Rows and columns follow the Kronecker order $20\otimes19\otimes23$; in the bordered factor index $0$ is the border and the field element $z$ sits at index $1+z$, with $\F_p$ written as $0,\dots,p-1$. Its check mode compares all \(38\,189\,430\) pairs of transposed entries and finds that every distinct row pair has Hamming distance \(4370\), giving inner product \(8740-2\cdot4370=0\). A second program, \texttt{code/check8740.c}, shares no code with the builder and repeats both checks on the packed file; a copy with one flipped entry fails. The command \texttt{make verify} runs all of this in about ten seconds on one core. The SHA-256 digest of the uncompressed rows (one bit per negative sign, most significant bit first, rows padded with zero bits) is

@@ -42,3 +42,41 @@ hypothesis, sharpening, documentation.
     7. (documentation) The census citation.
 - **Prior art.** A read-only pass found no earlier record; the residuals are
   in `audit/PRIOR-ART.md`.
+
+## 2026-11-19 — combined release audit of draft commit 3ec7a80
+
+A read-only audit (Sonnet) covered claims, citations and reproducibility.
+
+**Verdict:** PASS-WITH-FIXES. The audit confirmed:
+- `make verify` gives 4 MATCH from a clean archive;
+- `make paper` is identical from two clean extractions, with all fonts Type 1;
+- the arithmetic, the cross-references and the text of the proof;
+- the Crossref metadata for the four DOIs.
+
+Findings and dispositions:
+
+1. (error, attribution) Kumar's index records 4828, not 460. The order 460
+   is checked in his construction notes. Fixed in the paper, README,
+   PRIOR-ART and the search log.
+2. (gap) Wallis was cited by exact theorem and corollary without the papers
+   being read.
+   - The Bull. Austral. Math. Soc. 1975 paper was then read: in the proof of
+     Theorem 1, $(cI+dQ)R$ is a symmetric type 2 matrix, confirming the
+     field-negation citation.
+   - The Linear Multilinear Algebra 1975 Corollary 4 is a scan without a text
+     layer, so the paper now cites it "as quoted in Kumar's notes".
+3. (gap) "Exactly three census entries" had no record in the repository.
+   Added `audit/census-family.md`: all 15 members with $v<2500$, checked
+   against the 595 undecided values parsed from the census text. 189, 1207
+   and 2185 are undecided; 517 and the rest are decided.
+4. (documentation) The MANIFEST.sha256 link was dead. Added at the candidate.
+5. (documentation) Dates. The pinned run is dated 2026-11-19; the paper's
+   date is the release date.
+6. (sharpening) Process wording in README and VERIFICATION was replaced with
+   "AI review passes, not human peer review", with a link to this ledger.
+7. (sharpening) "the two census lists" became "the census or Kumar's index".
+8. (documentation) `$v<2500$` rendering: unchanged. GitHub renders it as
+   math, and the same form is used in the earlier releases.
+9. (documentation) CITATION.cff lists two references; the DOI and release date
+   are added after archiving.
+10. (documentation) The unused `\zen` macro was removed.
