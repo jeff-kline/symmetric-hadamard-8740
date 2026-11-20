@@ -1,0 +1,1 @@
+Order 8740. Symmetry verified on 38189430 pairs. Every distinct row pair has distance 4370.

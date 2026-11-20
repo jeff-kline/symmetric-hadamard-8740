@@ -1,0 +1,114 @@
+\documentclass[11pt,letterpaper]{article}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.03in]{geometry}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue!45!black]{hyperref}
+\usepackage{xcolor}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\F}{\mathbb F}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\doi}[2]{\href{https://doi.org/#1}{#2}}
+\newcommand{\zen}[1]{Zenodo, v0.1.0 (November 2026). \doi{10.5281/zenodo.#1}{doi:10.5281/zenodo.#1}.}
+\hypersetup{pdftitle={A symmetric Hadamard matrix of order 8740},pdfauthor={Jeffery Kline}}
+\setlength{\parindent}{1.1em}
+\raggedbottom
+\title{A symmetric Hadamard matrix of order 8740}
+\author{Jeffery Kline}
+\date{November 20, 2026\\[3pt]\small Draft}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct a symmetric Hadamard matrix of order \(8740=4\cdot2185\), settling an entry listed as undecided in the 2025 census of Djokovi\'c and Seberry. For every prime power \(q\equiv3\pmod4\) admitting a symmetric Hadamard matrix of order \(q+5\), we construct symmetric Hadamard matrices of orders \((q+1)(q+4)q^r\) for all \(r\geq0\). Seberry obtained the same orders for ordinary Hadamard matrices, and Kumar gave the symmetric case \(r=0\). We introduce field negation into each step of Seberry's recursion so that the two component matrices remain symmetric and commute for every \(r\). At \(q=19\) the construction gives the unconditional family \(460\cdot19^r\). Its first iterate is the matrix of order 8740.
+\end{abstract}
+
+\section{The census entry}
+A sign matrix has entries in \(\{1,-1\}\). A symmetric Hadamard matrix of order \(n\) is a symmetric sign matrix \(H\) satisfying \(H^2=nI_n\). Djokovi\'c and Seberry~\cite[Section~2]{census} list \(v=2185\) among the odd \(v<2500\) for which symmetric existence at order \(4v\) was undecided. Kumar's November 2026 update~\cite{kumar} explicitly considers \(4\cdot2185\) via a symmetric orthogonal design of order 92. The order remains outside its index of 103 symmetric constructions. We give a formula over \(\F_{19}\) and \(\F_{23}\) that decides this entry.
+
+Ordinary existence at 8740 has been known for half a century. Wallis~\cite[Corollary~4]{williamson} listed 2185 as a Williamson-type component order. Spence~\cite[Theorems~6 and~10]{spence} gave a recursive orthogonal design, and Seberry~\cite[Corollary~2(b)]{seberry} obtained the exact order formula in the abstract. Wallis~\cite[proof of Theorem~1]{reverse} had also used field negation in a symmetric orthogonal design. The contribution here is a recursion on \emph{symmetric} pairs and the resulting symmetric witness at 8740. We found no earlier symmetric construction at that order in these sources or the two census lists.
+
+\newpage
+\section{A recursion on symmetric pairs}
+Write \(J_s\) for the all-ones matrix of order \(s\). The following form allows starting pairs other than the Hadamard core used in Section~\ref{sec:witness}.
+
+\begin{theorem}\label{thm:transfer}
+Let \(q\equiv3\pmod4\) be a prime power. If \(X,Y\) are commuting symmetric sign matrices of order \(t\) satisfying
+\begin{equation}
+ X^2+qY^2=(q+1)tI_t, \label{eq:pair}
+\end{equation}
+then there is a symmetric Hadamard matrix of order \((q+1)tq^r\) for every integer \(r\geq0\).
+\end{theorem}
+
+\begin{proof}
+Index rows and columns by \(\F_q\). Let \(\chi\) be its quadratic character with \(\chi(0)=0\), put \(Q_{xy}=\chi(y-x)\), and let \(L\) be the permutation matrix of \(x\mapsto-x\). Write \(J=J_q\). Since \(\chi(-1)=-1\) and \(\sum_x\chi(x)=0\),
+\[
+ Q^T=-Q,\qquad LQL=-Q,\qquad QJ=JQ=0,\qquad QQ^T=qI-J.
+\]
+For the last identity the diagonal entries are \(q-1\). For \(a\ne b\) the \((a,b)\) entry is the sum of \(\chi((z-a)/(z-b))\) over \(z\ne b\). The quotient takes every value except \(1\) exactly once, giving sum \(-1\).
+
+Starting from a pair in \eqref{eq:pair}, form
+\begin{equation}
+ X'=J\otimes Y,\qquad Y'=L\otimes X+QL\otimes Y. \label{eq:lift}
+\end{equation}
+The matrices \(L,QL\) are symmetric. Each position is occupied by a sign in exactly one of them, since the zero diagonal of \(Q\) moves to the support of \(L\). Thus \(Y'\) is a symmetric sign matrix. Since \(JL=LJ=J\), \(JQL=QLJ=0\), and \(XY=YX\), the matrix \(X'\) commutes with \(Y'\). Moreover \(L(QL)=-Q\) and \((QL)L=Q\), so in squaring \(Y'\) the two mixed products \(-Q\otimes XY\) and \(Q\otimes YX\) cancel because \(XY=YX\). As \((QL)^2=qI-J\), we obtain
+\[
+ (X')^2=qJ\otimes Y^2,\qquad
+ (Y')^2=I\otimes X^2+(qI-J)\otimes Y^2 .
+\]
+Hence \((X')^2+q(Y')^2=qI\otimes(X^2+qY^2)\). This gives a pair satisfying \eqref{eq:pair} at order \(qt\).
+
+To finish at any level, use the bordered Paley matrix and signed permutation
+\[
+ C=\begin{pmatrix}0&\one^T\\-\one&Q\end{pmatrix},\qquad
+ P=\operatorname{diag}(-1,L),\qquad H=P\otimes X+CP\otimes Y .
+\]
+The identities for \(Q\) give \(C^T=-C,\ C^2=-qI,\ PCP=-C\). Thus \(P,CP\) are symmetric, anticommute and have squares \(I,qI\). Their supports partition the positions, since \(C\) has zero diagonal and signs elsewhere. It follows that \(H\) is a symmetric sign matrix and, since the mixed terms cancel because \(XY=YX\), \(H^2=I_{q+1}\otimes(X^2+qY^2)\). Applying this completion after \(r\) iterations proves the theorem.
+\end{proof}
+
+\newpage
+\section{The family and its order-8740 witness}\label{sec:witness}
+\begin{corollary}
+Suppose \(q\equiv3\pmod4\) is a prime power and there is a symmetric Hadamard matrix of order \(q+5\). Then there is a symmetric Hadamard matrix of order \((q+1)(q+4)q^r\) for every integer \(r\geq0\).
+\end{corollary}
+\begin{proof}
+Put \(t=q+4\). Normalize the symmetric input to have first row and column all ones: first negate the matrix if necessary to make its top left entry \(+1\), then conjugate by the diagonal matrix formed from its first row. Its core \(D\), obtained by deleting that row and column, satisfies \(D\one=-\one\) and \(D^2=(q+5)I-J_t\). Consequently \(D\) commutes with \(X=J_t-2I\). Since \(X^2=4I+qJ_t\),
+\[
+ X^2+qD^2=\bigl(4+q(q+5)\bigr)I=(q+1)(q+4)I.
+\]
+Apply Theorem~\ref{thm:transfer} to \((X,D)\).
+\end{proof}
+
+Seberry uses the same starting matrices in her ordinary construction~\cite{seberry}. Fender computes their weighted square identity explicitly in a study of Hadamard excess~\cite[Proposition~3.3.1]{fender}. In the usual recursion the new pair is \(J\otimes Y,\ I\otimes X+Q\otimes Y\). Right multiplication of both matrices by \(L\otimes I_t\) gives exactly \eqref{eq:lift}. The calculation in the proof shows why this change can be made again at every level.
+
+\paragraph{An explicit matrix.}
+Use subscripts on \(Q,L\) to specify the field. Over \(\F_{23}\) put
+\[
+ D=-(I_{23}+Q_{23})L_{23},\qquad X=J_{23}-2I_{23}.
+\]
+The matrix \(D\) is symmetric with entries \(\pm1\), has row sum \(-1\), and has square \(I_{23}-Q_{23}^2=24I_{23}-J_{23}\). Thus bordering \(D\) by ones gives the symmetric input of order 24. Taking \(q=19\) proves existence at \(460\cdot19^r\) for all \(r\geq0\). In the notation of the theorem the first iterate is
+\[
+ H=P\otimes J_{19}\otimes D
+   +CP\otimes L_{19}\otimes X
+   +CP\otimes Q_{19}L_{19}\otimes D .
+\]
+Its three tensor factors have orders 20, 19 and 23. The first three orders in the sequence are \(460,\ 8740,\ 166060\). The census settlement documented here is 8740. For $r=0$ the matrix is Kumar's symmetric form of the Williamson--Wallis $m(m+3)$ construction, built on Paley's classical symmetric orthogonal design of order $q+1$; his index records $460$ and $4828=(67+1)(67+4)$ this way, and its completion step is the case $r=0$ of the theorem above~\cite{kumar}. The new step is the lift for $r\ge1$. Of the census's undecided entries the family contains exactly three: $2185$, $1207$ ($q=67$, $r=0$) and $189$ ($q=3$, $r=3$, order $756$). The last was settled after the census by Djokovi\'c~\cite{d25}, by a different construction.
+
+\paragraph{Exact verification.}
+The program \texttt{code/witness.cpp} builds the matrix from the formula above and writes it packed, one bit per entry. Rows and columns follow the Kronecker order $20\otimes19\otimes23$; in the bordered factor index $0$ is the border and the field element $z$ sits at index $1+z$, with $\F_p$ written as $0,\dots,p-1$. Its check mode compares all \(38\,189\,430\) pairs of transposed entries and finds that every distinct row pair has Hamming distance \(4370\), giving inner product \(8740-2\cdot4370=0\). A second program, \texttt{code/check8740.c}, shares no code with the builder and repeats both checks on the packed file; a copy with one flipped entry fails. The command \texttt{make verify} runs all of this in about ten seconds on one core. The SHA-256 digest of the uncompressed rows (one bit per negative sign, most significant bit first, rows padded with zero bits) is
+\begin{center}\footnotesize\ttfamily 0b5cdf1b6be1396aa6fc41b35d4c42d822d685b6325333b3a2584389400d4125\end{center}
+
+\newpage
+\small
+\begin{thebibliography}{99}
+\raggedright
+\bibitem{census} D.~\v{Z}. Djokovi\'c and J. Seberry, \href{https://us.ticmeet.com/assets/archivos/d6f1d9b8-d39f-4888-925a-7eb81c4905cc/jenni-paper.pdf}{Census of symmetric and skew Hadamard matrices of order \(4v\) for odd \(v<2500\)}, manuscript posted with the Hadamard 2025 workshop materials, PDF dated 28 May 2025 (document metadata); the host's TLS certificate was invalid when retrieved on 19 November 2026.
+\bibitem{d25} D.~\v{Z}. Djokovi\'c, \href{https://arxiv.org/abs/2508.17141}{Orthogonal designs and symmetric Hadamard matrices}, arXiv:2508.17141, 2025.
+\bibitem{fender} K. Fender, \href{https://www.ulethbridge.ca/sites/default/files/docs/Spring\%202016\%20-\%20Kai\%20Fender\%20-\%20Honours\%20Thesis.pdf}{Recursively-constructed unit Hadamard matrices: their excess and a resulting family of BIBDs}, honours thesis, University of Lethbridge, 2016.
+\bibitem{kumar} K. Kumar, \href{https://generalised.si/research/skew-symmetric-hadamard}{New families and orders of skew-Hadamard and symmetric Hadamard matrices}, GSI-R-0002, 2026. \href{https://github.com/vatskishan03/Hadamard/blob/d885022144ba6bf4efa8315e14871a3736947527/symmetric/README.md}{Symmetric index} and \href{https://github.com/vatskishan03/Hadamard/blob/d885022144ba6bf4efa8315e14871a3736947527/search/NOTES.md}{construction notes}, revision \texttt{d885022}, consulted 19 November 2026.
+\bibitem{seberry} J. Seberry, \doi{10.1017/S1446788700021212}{Some infinite classes of Hadamard matrices}, \emph{J. Austral. Math. Soc. Ser. A} \textbf{29} (1980), 235--242.
+\bibitem{spence} E. Spence, \doi{10.1017/S1446788700020255}{An infinite family of Williamson matrices}, \emph{J. Austral. Math. Soc. Ser. A} \textbf{24} (1977), 252--256.
+\bibitem{williamson} J. Seberry Wallis, \doi{10.1080/03081087508817111}{Construction of Williamson type matrices}, \emph{Linear Multilinear Algebra} \textbf{3} (1975), 197--207.
+\bibitem{reverse} J. Seberry Wallis, \doi{10.1017/S0004972700023807}{Constructions for amicable orthogonal designs}, \emph{Bull. Austral. Math. Soc.} \textbf{12} (1975), 179--182.
+\end{thebibliography}
+\end{document}

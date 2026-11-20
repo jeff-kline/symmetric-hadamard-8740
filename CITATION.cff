@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "Please cite Version 0.1.0 of this research repository."
+title: "A symmetric Hadamard matrix of order 8740"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Kline
+    given-names: Jeffery
+repository-code: "https://github.com/jeff-kline/symmetric-hadamard-8740"
+url: "https://github.com/jeff-kline/symmetric-hadamard-8740"
+license: GPL-3.0-only
+abstract: >-
+  A symmetric Hadamard matrix of order 8740 = 4·2185, an order listed as
+  undecided in the 2025 Đoković–Seberry census. For every prime power
+  q = 3 mod 4 with a symmetric Hadamard matrix of order q+5, the note gives
+  symmetric Hadamard matrices of orders (q+1)(q+4)q^r for all r >= 0, by
+  building field negation into each step of Seberry's 1980 recursion; Seberry
+  obtained these orders for ordinary matrices and Kumar gave the symmetric case
+  r = 0. At q = 19 this gives 460·19^r. The repository builds the matrix from
+  its formula and checks it with two independent programs. Novelty is bounded
+  to the sources searched.
+keywords:
+  - Hadamard matrices
+  - symmetric Hadamard matrices
+  - orthogonal designs
+  - finite fields
+references:
+  - type: article
+    title: "Some infinite classes of Hadamard matrices"
+    authors:
+      - family-names: Seberry
+        given-names: Jennifer
+    journal: "Journal of the Australian Mathematical Society, Series A"
+    volume: 29
+    year: 1980
+    doi: 10.1017/S1446788700021212
+  - type: article
+    title: "An infinite family of Williamson matrices"
+    authors:
+      - family-names: Spence
+        given-names: Edward
+    journal: "Journal of the Australian Mathematical Society, Series A"
+    volume: 24
+    year: 1977
+    doi: 10.1017/S1446788700020255

@@ -1,0 +1,1 @@
+PASS: order 8740, symmetric on 38189430 pairs, all 38189430 distinct row pairs at distance 4370
