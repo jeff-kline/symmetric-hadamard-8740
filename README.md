@@ -2,11 +2,17 @@
 
 Jeffery Kline
 
-**Status: release candidate for version 0.1.0.** The claims are frozen
-and audited (see [ADMISSION.md](ADMISSION.md)). There is no tag, archive or
-DOI yet, so there is no stable citation. Admission under the project's
+[![Version DOI: 10.5281/zenodo.24383049](https://zenodo.org/badge/DOI/10.5281/zenodo.24383049.svg)](https://doi.org/10.5281/zenodo.24383049)
+
+**Status: version 0.1.0 admitted 2026-11-20.** The immutable release is
+[`v0.1.0`](https://github.com/jeff-kline/symmetric-hadamard-8740/releases/tag/v0.1.0), archived at version DOI
+[`10.5281/zenodo.24383049`](https://doi.org/10.5281/zenodo.24383049). The concept DOI
+[`10.5281/zenodo.24383048`](https://doi.org/10.5281/zenodo.24383048) resolves to the latest version; cite the
+version DOI for reproducibility. Admission under the project's
 [public research standard](https://jeff-kline.github.io/posts/research-program/index.html)
-is a release decision, not peer review or a correctness certificate.
+is a release decision, not peer review or a correctness certificate; see
+[ADMISSION.md](ADMISSION.md). The tagged snapshot retains its prepublication
+“release candidate” wording because the DOI did not exist when it was made.
 
 The note is [paper/main.pdf](paper/main.pdf); its source is
 [paper/main.tex](paper/main.tex).

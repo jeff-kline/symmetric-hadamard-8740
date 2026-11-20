@@ -3,6 +3,15 @@ message: "Please cite Version 0.1.0 of this research repository."
 title: "A symmetric Hadamard matrix of order 8740"
 type: software
 version: 0.1.0
+doi: 10.5281/zenodo.24383049
+date-released: 2026-11-20
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24383049
+    description: "Version DOI for release 0.1.0"
+  - type: doi
+    value: 10.5281/zenodo.24383048
+    description: "Concept DOI (all versions)"
 authors:
   - family-names: Kline
     given-names: Jeffery

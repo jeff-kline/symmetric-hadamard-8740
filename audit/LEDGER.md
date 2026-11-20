@@ -80,3 +80,15 @@ Findings and dispositions:
 9. (documentation) CITATION.cff lists two references; the DOI and release date
    are added after archiving.
 10. (documentation) The unused `\zen` macro was removed.
+
+## 2026-11-20 — tag, archive and admission
+
+- Pre-tag rescan: nothing new (see the search log).
+- Tag `v0.1.0` (object `1346f2e`) → `24bae54`; the tagged-state audit passed
+  8 of 8. The GitHub Release was published at 2026-11-20 00:16 UTC.
+- Zenodo record 24383049 (version DOI 10.5281/zenodo.24383049, concept DOI 10.5281/zenodo.24383048). The Zenodo
+  file is byte-identical to the GitHub zipball pinned before the Release
+  (SHA-256 `363962b6…`); the archived-state audit passed 12 of 12.
+- Living metadata: README status paragraph and DOI badge, `CITATION.cff` DOI,
+  identifiers and `date-released`, the note's DOI line, ADMISSION ADMITTED,
+  the CORRECTIONS version history and the rescan record.

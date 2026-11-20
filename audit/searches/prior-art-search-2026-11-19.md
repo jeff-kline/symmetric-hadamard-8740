@@ -51,3 +51,12 @@ search is recorded as NOT PERFORMED, not as a negative result.
 - Wallis, *Constructions for amicable orthogonal designs*, Bull. Austral. Math. Soc. 12 (1975), 179–182 (Cambridge PDF): in the proof of Theorem 1, $(cI+dQ)R$ with $R$ the reversal is a symmetric type 2 matrix.
 - Seberry (1981), *Recurrence formulas for the construction of Williamson-type matrices*, which cites Spence 1977: not read.
 - Google Scholar, MathSciNet, zbMATH: not accessible.
+
+## Pre-tag rescan (2026-11-20T00:15Z)
+
+- GitHub code search: the positive control (`skew hadamard 1528`) hit
+  `vatskishan03/Hadamard`. `8740 symmetric hadamard` and `2185 symmetric`
+  returned no outside hits.
+- `vatskishan03/Hadamard`: no symmetric entry at 8740; latest commit d885022
+  (2026-11-06).
+- arXiv, newest entries matching "symmetric Hadamard": nothing new.
