@@ -25,7 +25,7 @@ We construct a symmetric Hadamard matrix of order \(8740=4\cdot2185\), settling 
 \section{The census entry}
 A sign matrix has entries in \(\{1,-1\}\). A symmetric Hadamard matrix of order \(n\) is a symmetric sign matrix \(H\) satisfying \(H^2=nI_n\). Djokovi\'c and Seberry~\cite[Section~2]{census} list \(v=2185\) among the odd \(v<2500\) for which symmetric existence at order \(4v\) was undecided. Kumar's November 2026 update~\cite{kumar} explicitly considers \(4\cdot2185\) via a symmetric orthogonal design of order 92. The order remains outside its index of 103 symmetric constructions. We give a formula over \(\F_{19}\) and \(\F_{23}\) that decides this entry.
 
-Ordinary existence at 8740 has been known for half a century. Wallis~\cite[Corollary~4]{williamson} listed 2185 as a Williamson-type component order (as quoted in Kumar's notes~\cite{kumar}). Spence~\cite[Theorems~6 and~10]{spence} gave a recursive orthogonal design, and Seberry~\cite[Corollary~2(b)]{seberry} obtained the exact order formula in the abstract. Wallis~\cite[proof of Theorem~1]{reverse} had also used field negation in a symmetric orthogonal design. The contribution here is a recursion on \emph{symmetric} pairs and the resulting symmetric witness at 8740. We found no earlier symmetric construction at that order in these sources, the census or Kumar's index.
+Ordinary existence at 8740 has been known for half a century. Wallis~\cite[Corollary~4]{williamson} listed 2185 as a Williamson-type component order (as quoted in Kumar's notes~\cite{kumar}). Spence~\cite[Theorems~6 and~10]{spence} gave a recursive orthogonal design, and Seberry~\cite[Theorem~1 and Corollary~2(b)]{seberry} gave the general recursion on amicable pairs and, from it, the exact order formula in the abstract. Wallis~\cite[proof of Theorem~1]{reverse} had also used field negation in a symmetric orthogonal design. The contribution here is a recursion on \emph{symmetric} pairs and the resulting symmetric witness at 8740. We found no earlier symmetric construction at that order in these sources, the census or Kumar's index.
 
 \newpage
 \section{A recursion on symmetric pairs}
@@ -78,7 +78,7 @@ Put \(t=q+4\). Normalize the symmetric input to have first row and column all on
 Apply Theorem~\ref{thm:transfer} to \((X,D)\).
 \end{proof}
 
-Seberry uses the same starting matrices in her ordinary construction~\cite{seberry}. Fender computes their weighted square identity explicitly in a study of Hadamard excess~\cite[Proposition~3.3.1]{fender}. In the usual recursion the new pair is \(J\otimes Y,\ I\otimes X+Q\otimes Y\). Right multiplication of both matrices by \(L\otimes I_t\) gives exactly \eqref{eq:lift}. The calculation in the proof shows why this change can be made again at every level.
+Seberry uses the same starting matrices in her ordinary construction~\cite{seberry}. Fender computes their weighted square identity explicitly in a study of Hadamard excess~\cite[Proposition~3.3.1]{fender}. In Seberry's recursion~\cite[Theorem~1]{seberry} the new pair is \(J\otimes Y,\ I\otimes X+Q\otimes Y\). Theorem~\ref{thm:transfer} above is its symmetric form: right multiplication of both matrices by \(L\otimes I_t\) gives exactly \eqref{eq:lift}. The calculation in the proof shows why this change can be made again at every level.
 
 \paragraph{An explicit matrix.}
 Use subscripts on \(Q,L\) to specify the field. Over \(\F_{23}\) put

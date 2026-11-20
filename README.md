@@ -64,7 +64,9 @@ examined. This is not a claim of global priority.
 
 - **Seberry (1980)**,
   [*Some infinite classes of Hadamard matrices*](https://doi.org/10.1017/S1446788700021212),
-  Corollary 2(b): the orders $(q+1)(q+4)q^r$ for ordinary Hadamard matrices.
+  Theorem 1: the recursion on amicable pairs that Theorem 1 here makes
+  symmetric; Corollary 2(b): the orders $(q+1)(q+4)q^r$ for ordinary Hadamard
+  matrices.
 - **Spence (1977)**,
   [*An infinite family of Williamson matrices*](https://doi.org/10.1017/S1446788700020255):
   the recursive orthogonal design.

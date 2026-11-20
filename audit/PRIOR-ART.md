@@ -10,7 +10,7 @@ $r\ge1$, in the sources examined.
 
 | Source | What it records | Bearing |
 |---|---|---|
-| Seberry (1980), Corollary 2(b) | ordinary Hadamard matrices of orders $(q+1)(q+4)q^r$ from a symmetric matrix of order $q+5$ | the orders and the seed; credited |
+| Seberry (1980), Theorem 1 and Corollary 2(b) | the general ordinary recursion on amicable pairs (Theorem 1); the orders $(q+1)(q+4)q^r$ from a symmetric matrix of order $q+5$ (Corollary 2(b)) | the recursion, the orders and the seed; credited |
 | Spence (1977) | the recursive orthogonal design; symmetric outputs only for $q\equiv1\pmod4$ | credited |
 | Wallis, Bull. Austral. Math. Soc. 12 (1975), proof of Theorem 1 (read, Cambridge PDF) | $(cI+dQ)R$ with $R$ the reversal $x\mapsto-x$ is a symmetric type 2 matrix: field negation in a symmetric orthogonal design | credited |
 | Wallis, Linear Multilinear Algebra 3 (1975), Corollary 4 | lists 2185 as a Williamson-type component order | cited as quoted in Kumar's notes (the scan has no text layer; not read) |

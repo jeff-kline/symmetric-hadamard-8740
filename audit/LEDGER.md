@@ -92,3 +92,12 @@ Findings and dispositions:
 - Living metadata: README status paragraph and DOI badge, `CITATION.cff` DOI,
   identifiers and `date-released`, the note's DOI line, ADMISSION ADMITTED,
   the CORRECTIONS version history and the rescan record.
+
+## 2026-11-20 — citation precision (living branch)
+
+A starting-pair review (outside this repository) read Seberry (1980) in full
+and noted that its Theorem 1 is the general ordinary recursion: amicable $A,B$
+with $AA^T+pBB^T=q(1+p)I$, $A'=J\otimes B$, $B'=I\otimes A+S\otimes B$.
+Theorem 1 here is its symmetric form. The paper, README and PRIOR-ART now cite
+Seberry's Theorem 1 by number (documentation). No claim changes; the archived
+v0.1.0 is unchanged.

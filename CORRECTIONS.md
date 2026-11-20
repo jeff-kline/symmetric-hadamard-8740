@@ -23,6 +23,11 @@ Suspected errors may be reported through the repository's issue tracker:
 
 ### 0.1.0 — released 2026-11-20
 
+- **2026-11-20, documentation (living branch only):** Seberry's 1980
+  Theorem 1 is now cited by number as the ordinary recursion that Theorem 1
+  here symmetrizes. The archived v0.1.0 already credited "Seberry's
+  recursion" and its Corollary 2(b). No claim changes.
+
 - Tag `v0.1.0` at commit `24bae54`; version DOI
   [`10.5281/zenodo.24383049`](https://doi.org/10.5281/zenodo.24383049), concept DOI `10.5281/zenodo.24383048`.
 - The tagged snapshot retains its prepublication “release candidate” wording
